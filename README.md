@@ -19,18 +19,27 @@ Configuration
 -----
 
 Create/update user registration form
+
 Add hidden field (label can be set to anything), under "Advanced" tab select populate this field dynamically
+
 Insert "public_key" in the field that is shown
+
 Save form
+
 Click on "Form Notifications"
+
 Create message response (to either admin or user) add the following link structure http://yourdomain.tld/validate-user/{public_key}/
+
 Use the dropdown field tool to supply the public_key value in the link - so that it is properly associated to that field
+
 Create/update page, set the slug to be "validate-user"
 
 Add shortcode to template, content or widget area you want validation messaging to appear
+
     [gfauthenticateuser]
 
 Define the short code with the following parameters:
+
     fail="Message you want to deliver if no user is found or bad hash is delivered"
     success="Message you want to deliver once user is upgraded"
     setrole="User role that has access to the area you want to give"
